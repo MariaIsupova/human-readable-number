@@ -75,9 +75,6 @@
  }
 
  module.exports = function toReadable(number, len) {
-    // number = number.toString()
-    //console.log("Number ",number)
-
     var result = ''
     if (number ===0){
         return 'zero'
@@ -93,7 +90,6 @@
     
     let h =Math.trunc( count % 3)
     let t =Math.trunc( count/3)
-    //console.log('первые ',h,'основные ',t)
 
     if (h===1){
         result+=digits(numberStr[0])
@@ -125,8 +121,5 @@
     if (result[result.length-1]===' '){
         result = result.slice(0,-1)
     }
-    //console.log('res',result)
     return result
 }
-
-// toReadable(1999)
